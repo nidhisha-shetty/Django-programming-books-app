@@ -1,0 +1,14 @@
+{% extends 'basic.html' %} 
+{% block content %}
+
+
+{% for x in context_qs %}
+
+<ul>
+	<!-- <li><a href=>{{ x.book_title }} -- {{ x.book_author }} <br/></li> -->
+	<li><a href="{{ x.go_to_link_edit }}"> {{ x.book_title }} -- {{ x.book_author }} <br/></li>
+
+</ul>
+{% endfor %}
+
+{% endblock %}

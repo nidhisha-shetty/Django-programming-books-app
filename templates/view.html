@@ -1,0 +1,9 @@
+{% extends 'basic.html' %}
+
+{% block content %} 
+	<b>Book name: </b>{{ context_obj.book_title }} <br/>	
+	<b>Book author: </b>{{ context_obj.book_author }} <br/>
+	<b>Book image: </b>  <img src="{{ context_obj.book_img.url }}"  height="200" width="200" />
+
+
+{% endblock %}
