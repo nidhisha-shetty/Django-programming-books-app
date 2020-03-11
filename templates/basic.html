@@ -1,6 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books</title>
+</head>
 
 
-<p align="left">Welcome, {{ request.user.username }}</p>
+<body style="background-color:Grey;">
+
+<h1>
+	<p align="center" style = "font-family:georgia;font-style:italic;">Programming Books</p>
+</h1>
+
+<p align="left" style = "font-family:georgia;font-style:italic;">Welcome, {{ request.user.username }}</p>
 
 {% block content %}
 {% endblock %}
+
+</body>
+</html>
