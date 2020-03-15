@@ -1,10 +1,28 @@
 
 {% extends 'basic.html' %}
 {% block content%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Book-home</title>
+	<link rel="stylesheet" type="text/css" href="C:\Users\Nidhisha Shetty\trydjango\Projects\Project_books\templates\style.css" />
+</head>
+<body>
+	<style>
+		.button {
+			background-color:grey;
+			color: black
+		}
+	</style>
+	<div class="container1">
 
-<a href="http://127.0.0.1:8000/create/" style = "font-family:georgia;font-style:italic;">Create</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://127.0.0.1:8000/edit_list/" style = "font-family:georgia;font-style:italic;">Update</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://127.0.0.1:8000/delete_list/" style = "font-family:georgia;font-style:italic;">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://127.0.0.1:8000/view_list/" style = "font-family:georgia;font-style:italic;">Read</a>
+		<a href="http://127.0.0.1:8000/create/"> <button class="button">Add book</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/edit_list/" ><button class="button">Update book details</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/delete_list/"><button class="button">Delete book</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/view_list/"><button class="button">Read book</button></a>
+	</div>
 
+</body>
+</html>
 {% endblock %}
