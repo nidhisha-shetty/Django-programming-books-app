@@ -12,8 +12,8 @@
 	<style>
 		.button {
 			border: none;
-			font-family: "montserrat",sans-serif;
-			text-transform: uppercase;
+			font-family: "georgia",sans-serif;
+			font-style:italic;
 			border-radius: 6px;
 			cursor: pointer;
 			background-size: 200%
@@ -23,15 +23,21 @@
 			border-radius: 6px;
 			color: Black;
 			background-size: 200%;
-			background-image: linear-gradient(to left, #EE5A24, #B53471, #EE5A24);
+			background-image: linear-gradient(to left, #BDC581, #58B19F, #BDC581);
+			transition: 0.1s;
+			overflow: hidden;
+		}
+		.button:hover{
+			color: #BDC581
 		}
 	</style>
 	<div class="container1">
-
-		<a href="http://127.0.0.1:8000/create/"> <button class="button">Add book</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/edit_list/" ><button class="button">Update book details</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/delete_list/"><button class="button">Delete book</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/view_list/"><button class="button">Read book</button></a>
+		<p align="center">
+		<a href="http://127.0.0.1:8000/create/"> <button class="button"><b>Add book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/edit_list/" ><button class="button"><b>Update book details</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/delete_list/"><button class="button"><b>Delete book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://127.0.0.1:8000/view_list/"><button class="button"><b>Read book</b></button></a>
+	</p>
 	</div>
 
 </body>
