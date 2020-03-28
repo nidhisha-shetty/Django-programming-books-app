@@ -6,7 +6,7 @@ class Book(models.Model):
 	book_title = models.CharField(max_length=100)
 	book_author = models.CharField(max_length=50)
 	book_description=models.TextField(blank=True, null=True)
-	book_image = models.ImageField(upload_to='images/', blank=False) 
+	book_image = models.ImageField(upload_to='images/', blank=True) 
 
 	def go_to_link_edit(self):
 		return f"/edit/{self.id}/"
