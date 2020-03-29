@@ -1,12 +1,41 @@
 {% extends 'basic.html' %}
-
-
 {% block content %}
 
 {% for x in context_qs %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<style>
+		.button {
+			border: none;
+			font-family: "georgia",sans-serif;
+			font-style:italic;
+			border-radius: 6px;
+			cursor: pointer;
+			background-size: 10%
+			margin: 1px;
+			padding: 1px;
+			width: 1px;
+			border-radius: 6px;
+			color: Black;
+			background-size: 200%;
+			
+		}
+</style>
+
+
 <ul>
-<li><a href="{{x.go_to_link_view}}">{{ x.book_title }} </li>
+	<li> <a class="button" href="{{x.go_to_link_view}}">{{ x.book_title }} </li>
 </ul>
 {% endfor %}
 
 {% endblock %}
+
+
+</body>
+</html>
