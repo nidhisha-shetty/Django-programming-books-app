@@ -1,6 +1,8 @@
-
 {% extends 'basic.html' %}
+
 {% block content%}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -34,13 +36,15 @@
 			transition-delay: 0.2s;
 		}
 	</style>
-		<p align="center">
-		<a href="http://127.0.0.1:8000/create/"> <button class="button"><b>Add book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/edit_list/" ><button class="button"><b>Update book details</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/delete_list/"><button class="button"><b>Delete book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="http://127.0.0.1:8000/view_list/"><button class="button"><b>Read book</b></button></a>
+		<p align="center"><br><br>
+		<a href="/create/"> <button class="button"><b>Add book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/edit_list/" ><button class="button"><b>Update book details</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/delete_list/"><button class="button"><b>Delete book</b></button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/view_list/"><button class="button"><b>Read book description</b></button></a><br><br>
+	
+	<img src="{% static 'books/programming-books-stock.jpg' %}" height="350" width="1300" border="1">
+	
 	</p>
-
 
 </body>
 </html>

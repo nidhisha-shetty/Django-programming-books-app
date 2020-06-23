@@ -2,10 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .forms import BookForm
 from .models import Book
+from django.contrib import messages
 # Create your views here.
-
-
-
 
 def home_view(request):
 	# return HttpResponse("Hello World") 			   #requires "from django.http import HttpResponse"
@@ -17,6 +15,7 @@ def home_view(request):
 def create_view(request):
 	form=BookForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
+		messages.info(request, "Book details saved!")
 		form.save()
 		form=BookForm()
 
@@ -35,7 +34,7 @@ def edit_view(request):
 	context={
 	'context_form': form
 	}
-	return render(request, 'create.html', context)
+	return render(request, 'edit.html', context)
 
 
 def view_view(request):
@@ -62,11 +61,12 @@ def edit_global_view(request, id):
 	form=BookForm(request.POST or None, request.FILES or None, instance=obj)
 	if form.is_valid():
 		form.save()
+		messages.info(request, "Book details changed!")
 		form=BookForm()
 	context={
 	'context_form': form
 	}
-	return render(request, 'create.html', context)
+	return render(request, 'edit.html', context)
 
 
 def view_global_view(request, id):
@@ -82,7 +82,7 @@ def delete_global_view(request, id):
 
 	if request.method=='POST':
 		obj.delete()
-		return redirect("/")
+		return redirect("/delete_list")
 	context={
 	'context_obj': obj
 	}

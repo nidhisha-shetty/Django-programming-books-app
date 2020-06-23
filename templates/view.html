@@ -1,11 +1,31 @@
 {% extends 'basic.html' %}
-
 {% block content %} 
-	<b>Book name: </b>{{ context_obj.book_title }} <br/>	
-	<b>Book author: </b>{{ context_obj.book_author }} <br/>
-	<b>Book image: </b>  <img src="{{ context_obj.book_image.url }}"  height="200" width="200" />
 
+<style>
+		.button {
+			border: none;
+			font-family: "georgia",sans-serif;
+			font-style:italic;
+			border-radius: 6px;
+			cursor: pointer;
+			background-size: 10%
+			margin: 1px;
+			padding: 1px;
+			width: 50px;
+			border-radius: 6px;
+			color: Black;
+			background-size: 200%;
+			
+		}
+</style>
 
+	<p align="center"><img src="{{ context_obj.book_image.url }}"  height="200" width="200" border='1'/></p><br>
+	<b>Book name: </b>{{ context_obj.book_title }} <br><br>
+	<b>Book author: </b>{{ context_obj.book_author }} <br><br>
+	<b>Book description: </b>{{ context_obj.book_description }}<br>
+	<p align="center">
+		<button class="button"><a href ='/'>Back</a></button>
+	</p>
 {% endblock %}
 
 

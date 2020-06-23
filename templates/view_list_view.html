@@ -20,28 +20,21 @@
 			background-size: 10%
 			margin: 1px;
 			padding: 1px;
-			width: 1px;
+			width: 50px;
 			border-radius: 6px;
 			color: Black;
 			background-size: 200%;
 			
 		}
-		.button:hover{
-			color: #BDC581
-			background: #BDC581;
-			box-shadow: 0 0 10px #58B19F, 0 0 40px #58B19F, 0 0 80px #58B19F;
-			transition-delay: 0.2s;
-		}
+		
 </style>
 
+<li> <a class="button" href="{{x.go_to_link_view}}">{{ x.book_title }} </li>
 
-<ul>
-	<li> <a class="button" href="{{x.go_to_link_view}}">{{ x.book_title }} </li>
-</ul>
 {% endfor %}
-
+<p align="center">
+<button class="button"><a href ='/'>Back</a></button>
+</p>
 {% endblock %}
-
-
 </body>
 </html>

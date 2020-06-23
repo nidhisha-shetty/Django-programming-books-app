@@ -20,7 +20,7 @@
 			background-size: 10%
 			margin: 1px;
 			padding: 1px;
-			width: 1px;
+			width: 50px;
 			border-radius: 6px;
 			color: Black;
 			background-size: 200%;
@@ -28,16 +28,16 @@
 		}
 </style>
 
-<ul>
+
 	<!-- <li><a href=>{{ x.book_title }} -- {{ x.book_author }} <br/></li> -->
-	<li><a class="button" href="{{ x.go_to_link_edit }}" > {{ x.book_title }} -- {{ x.book_author }} <br/></li>
-
-</ul>
-
-</body>
-</html>
-
+	<li><a class="button" href="{{ x.go_to_link_edit }}" > {{ x.book_title }}</li>
 
 {% endfor %}
+
+<p align="center">
+<button class="button"><a href ='/'>Back</a></button>
+</p>
+</body>
+</html>
 
 {% endblock %}
