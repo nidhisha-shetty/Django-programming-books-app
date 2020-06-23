@@ -1,6 +1,5 @@
 {% extends 'basic.html' %}
 {% block content %}
-
 {% for x in context_qs %}
 
 <!DOCTYPE html>
@@ -28,9 +27,7 @@
 		}
 		
 </style>
-
 <li> <a class="button" href="{{x.go_to_link_view}}">{{ x.book_title }} </li>
-
 {% endfor %}
 <p align="center">
 <button class="button"><a href ='/'>Back</a></button>
